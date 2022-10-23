@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@1,300&family=Fasthand&family=Fuzzy+Bubbles&family=IBM+Plex+Sans:wght@300&family=Poppins:wght@500&family=Roboto:ital,wght@0,300;1,100&display=swap');
+
+/* font-family: 'Anton', sans-serif;
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Fasthand', cursive;
+font-family: 'Fuzzy Bubbles', cursive;
+font-family: 'Poppins', sans-serif; 
+font-family: 'Roboto', sans-serif;*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior:smooth;
+}
+
+:root {
+    --color-bg: #0e0220;
+    --font-color: white;
+    --color-primary: #e40475;
+    --color-primary: #e1001e;
+    --color-sp: #48e0e4;
+    --color-sp: #2d5345;
+
+    --container-width-lg: 75%;
+    --container-width-md: 86%;
+    --container-width-sm: 90%;
+    --transition: all 400ms ease;
+}
+
+.container {
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 5rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    font-family: 'Fuzzy Bubbles', cursive;
+    color: var(--font-color);
+    font-size: 2.5rem;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+a {
+    color: var(--font-color);
+    transition: var(--transition);
+
+}
+
+a:hover {
+    color: var(--color-primary);
+}
+
+
+.btn {
+    width: max-content;
+    display: inline-block;
+    color: var(--color-primary);
+    padding: 0.75rem 1.2rem;
+    cursor: pointer;
+    border: 1px solid var(--color-primary);
+    border-radius: 0.4rem;
+    transition: var(--transition);
+}
+
+
+.btn:hover {
+    background: white;
+    border-color: transparent;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: var(--font-color);
+}
+
+/* ======================================>>> Home <<<============================================= */
+
+#home {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #0000001f), url(./images/bride_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+#home h1 {
+    font-family: 'Tangerine', serif;
+    text-shadow: 2px 2px 2px var(--color-sp);
+    color: var(--color-primary);
+    font-size: 10rem;
+    text-align: left;
+}
+
+.home_text {
+    position: absolute;
+    bottom: 28%;
+    left: 5%;
+}
+
+.call_btn {
+    position: absolute;
+    top: 1%;
+    right: 5%;
+    font-family: 'Anton', sans-serif;
+}
+
+.book_btn {
+    margin-top: 1rem;
+}
+
+/* =================================== About   ================================= */
+#about {
+    margin-top: 3rem;
+}
+
+.about_cnt {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.name {
+    color: var(--color-primary);
+    text-align: left;
+    font-size: 3.4rem;
+    font-family: 'Fuzzy Bubbles', cursive
+}
+
+.about_img img {
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+}
+.about_cnt p{
+    font-size: 1.5rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+/* ===================== Services ============================*/
+#services{
+    background: #ecd5bc;
+    margin-top: 3rem;
+    padding: 3rem 0;
+}
+.service_cnt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.cards img {
+    border-radius: 20px;
+    height: 250px;
+    width: 250px;
+}
+
+.cards h3{
+    margin-top: .5rem;
+    font-family: 'Fuzzy Bubbles', cursive;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+}
+/* =================================== Contact   ================================= */
+
+.contactItems h3{
+    color: var(--color-sp);
+    margin-top: .3rem;
+}
+.contact{
+    font-size: 2rem;
+    color: var(--color-primary);
+}
+#contact {
+    margin-top: 3rem;
+}
+
+.contact_cnt{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem
+}
+
+footer{
+    margin-top: 1rem;
+    background: var(--color-primary);
+    padding: 2rem 0;
+    text-align: center;
+    color: var(--font-color);
+}
+footer h3{
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1.5rem;
+}
+footer p{
+    font-size: .8rem;
+}
+/* =========================== Media Queries =========================== */
+/* Media Queries for tablet */
+@media screen and (max-width : 1024px) {
+    .container {
+        width: var(--container-width-md);
+    }
+}
+
+
+
+/* Media Queries for mobile */
+@media screen and (max-width : 600px) {
+    .container {
+        width: var(--container-width-sm);
+        text-align: center;
+    }
+
+    .home_text {
+        text-align: center;
+        bottom: 5%;
+        right: 0;
+    }
+
+    #home h1 {
+        font-size: 6rem;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    /* About */
+    .about_cnt {
+        flex-direction: column;
+    }
+
+    .name {
+        text-align: center;
+    }
+
+    /* Service */
+    .service_cnt {
+        flex-direction: column;
+    }
+    .contact_cnt{
+        flex-direction: column;
+    }
+}
